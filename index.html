@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sunrise Consultancy Travel</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0a3d62;
+  color: white;
+  padding: 15px 30px;
+}
+
+nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+              url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
+  background-size: cover;
+  color: white;
+}
+
+.hero button {
+  padding: 10px 20px;
+  border: none;
+  background: #ff6b6b;
+  color: white;
+  cursor: pointer;
+}
+
+/* Search */
+.search {
+  text-align: center;
+  padding: 20px;
+}
+
+.search input, .search button {
+  padding: 10px;
+  margin: 5px;
+}
+
+/* Packages */
+.packages {
+  padding: 40px;
+  text-align: center;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 250px;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+/* Services */
+.services {
+  background: #f4f4f4;
+  padding: 40px;
+  text-align: center;
+}
+
+/* Contact */
+.contact {
+  padding: 40px;
+  text-align: center;
+}
+
+.contact input, .contact textarea {
+  width: 80%;
+  padding: 10px;
+  margin: 10px;
+}
+
+.contact button {
+  padding: 10px 20px;
+  background: #0a3d62;
+  color: white;
+  border: none;
+}
+
+/* Footer */
+footer {
+  background: #0a3d62;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+  <h2>Sunrise Consultancy</h2>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#packages">Packages</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Explore the World with Us</h1>
+  <p>Best travel deals & customized packages</p>
+  <button onclick="scrollToContact()">Get Quote</button>
+</section>
+
+<section class="search">
+  <input type="text" placeholder="Destination">
+  <input type="date">
+  <button onclick="search()">Search</button>
+</section>
+
+<section class="packages" id="packages">
+  <h2>Popular Packages</h2>
+  <div class="cards">
+    
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d">
+      <h3>Dubai Tour</h3>
+      <p>Starting ₹45,000</p>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e">
+      <h3>Bali Tour</h3>
+      <p>Starting ₹55,000</p>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1">
+      <h3>Europe Tour</h3>
+      <p>Starting ₹1,20,000</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="services" id="services">
+  <h2>Our Services</h2>
+  <p>✔ Visa Assistance | ✔ Flight Booking | ✔ Forex | ✔ Custom Tours</p>
+</section>
+
+<section class="contact" id="contact">
+  <h2>Get in Touch</h2>
+  <form onsubmit="submitForm(event)">
+    <input type="text" placeholder="Your Name" required><br>
+    <input type="email" placeholder="Email" required><br>
+    <textarea placeholder="Your Plan"></textarea><br>
+    <button type="submit">Submit</button>
+  </form>
+</section>
+
+<footer>
+  <p>© 2026 Sunrise Consultancy | sunriseconsultancy.hr@gmail.com</p>
+</footer>
+
+<script>
+function scrollToContact() {
+  document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+}
+
+function search() {
+  alert("Search feature coming soon!");
+}
+
+function submitForm(e) {
+  e.preventDefault();
+  alert("Thank you! We will contact you soon.");
+}
+</script>
+
+</body>
+</html>
